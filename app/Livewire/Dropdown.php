@@ -28,6 +28,6 @@ class Dropdown extends Component
     public function updatedCountryId($value): void
     {
         $this->cities = City::where('country_id', $value)->get();
-        $this->city = $this->cities->first()->id ?? null;
+        $this->cityId = $this->cities->first()->id ?? null;
     }
 }
